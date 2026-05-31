@@ -98,11 +98,11 @@ body.nav-open {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .site-nav a {
-  padding: 10px 14px;
+  padding: 10px 12px;
   border-radius: 999px;
   color: var(--muted);
   font-size: 0.92rem;
@@ -205,7 +205,10 @@ h3 {
 .about-panel p,
 .console-body p,
 .timeline-item p,
-.species-card p {
+.species-card p,
+.info-card p,
+.climate-card p,
+.species-traits dd {
   color: var(--muted);
   line-height: 1.75;
 }
@@ -437,7 +440,7 @@ h3 {
 }
 
 .species-card {
-  min-height: 340px;
+  min-height: 430px;
   padding: 26px;
   border-radius: 30px;
 }
@@ -453,6 +456,9 @@ h3 {
 
 .card-icon.reef { background: linear-gradient(135deg, var(--green), #176bff); }
 .card-icon.desert { background: linear-gradient(135deg, var(--amber), #ff5c7a); }
+.card-icon.sky { background: linear-gradient(135deg, #baf7ff, var(--cyan)); }
+.card-icon.iron { background: linear-gradient(135deg, #f36f47, #6f8499); }
+.card-icon.night { background: linear-gradient(135deg, #6d5cff, #050818); }
 
 .species-card span {
   display: inline-flex;
@@ -462,6 +468,109 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+
+.feature-grid,
+.climate-grid,
+.roadmap-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.climate-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.roadmap-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.info-card,
+.climate-card,
+.roadmap-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.info-card {
+  min-height: 230px;
+  padding: 28px;
+  border-radius: 30px;
+}
+
+.info-card h3,
+.roadmap-card h3 {
+  line-height: 1.2;
+}
+
+.species-traits {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 0;
+}
+
+.species-traits div {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.species-traits dt {
+  margin-bottom: 5px;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.species-traits dd {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.climate-card {
+  min-height: 240px;
+  padding: 24px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(61, 242, 255, 0.09), rgba(255, 255, 255, 0.03)),
+    var(--panel);
+}
+
+.climate-card span,
+.roadmap-card span {
+  display: inline-flex;
+  color: var(--cyan);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.climate-card strong {
+  display: block;
+  margin: 18px 0 14px;
+  color: var(--green);
+  font-family: Orbitron, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.roadmap-card {
+  min-height: 180px;
+  padding: 22px;
+  border-radius: 26px;
+}
+
+.roadmap-card.current {
+  background:
+    linear-gradient(135deg, rgba(61, 242, 255, 0.2), rgba(99, 255, 180, 0.1)),
+    var(--panel-strong);
 }
 
 .civilization {
@@ -515,7 +624,7 @@ h3 {
 
 .metric-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-top: 22px;
 }
@@ -619,7 +728,10 @@ h3 {
   }
 
   .card-grid,
-  .metric-list {
+  .metric-list,
+  .feature-grid,
+  .climate-grid,
+  .roadmap-grid {
     grid-template-columns: 1fr;
   }
 
@@ -634,8 +746,22 @@ h3 {
   }
 }
 
+@media (max-width: 1040px) {
+  .climate-grid,
+  .roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metric-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 560px) {
-  .hero-stats {
+  .hero-stats,
+  .climate-grid,
+  .roadmap-grid,
+  .metric-list {
     grid-template-columns: 1fr;
   }
 
@@ -653,5 +779,28 @@ h3 {
   .section-grid,
   .content-section {
     padding: 56px 0;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .climate-grid,
+  .roadmap-grid,
+  .metric-list {
+    grid-template-columns: 1fr;
   }
 }
