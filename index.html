@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Earth Simulation V5 is an interactive speculative future-history archive for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
-  <title>Earth Simulation V5 | Living Future Earth Archive</title>
+  <meta name="description" content="Earth Simulation V5.1 is an interactive speculative future-history archive for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
+  <title>Earth Simulation V5.1 | Living Future Earth Archive</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,8 +27,8 @@
         <a href="#species">Species</a>
         <a href="#lifeform-fate">Fates</a>
         <a href="#civilization">Civilization</a>
-        <a href="#climate">Climate</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#archives">Archives</a>
+        <a href="#narrative-seeds">Stories</a>
       </nav>
     </header>
 
@@ -37,7 +37,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Planetary future engine</p>
           <h1 id="hero-title">Earth Simulation: A Future Planet Engine</h1>
-          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V5 interface turns the planet into a living future Earth archive of adaptive worlds, world events, and fate-based lifeform records.</p>
+          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V5.1 interface turns the planet into a living future Earth archive of adaptive worlds, world events, and fate-based lifeform records.</p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="#timeline">Explore the timeline</a>
             <a class="button button-secondary" href="#civilization">Run civilization model</a>
@@ -101,7 +101,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Future timeline control system</p>
           <h2 id="timeline-title">Select an era and run the future panel.</h2>
-          <p>V5 links the timeline to a living world event archive. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
+          <p>V5.1 links the timeline to a living world event archive. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
         </div>
         <div class="timeline-console reveal">
           <div class="timeline-control-rail" aria-label="Future era controls">
@@ -134,13 +134,13 @@
           <article class="era-simulation-panel" aria-live="polite" aria-atomic="true">
             <div class="panel-status-bar">
               <span>Era simulation online</span>
-              <span class="simulation-mode">V5 archive HUD active</span>
+              <span class="simulation-mode">V5.1 archive HUD active</span>
               <span id="era-risk-chip">High volatility</span>
             </div>
             <div class="era-panel-content">
               <p class="console-label">Selected era</p>
               <h3 id="era-title">2080 · Climate Adaptation Era</h3>
-              <p id="era-description">The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.</p>
+              <p id="era-description">By 2080, Earth feels close and loud: seawalls breathe with storm forecasts, reflective rooftops shimmer above heat-stressed streets, and every river delta is watched like a patient in critical care. Humanity has not escaped the climate crisis; it has learned to live inside a planet-sized emergency room where adaptation is daily labor, citizenship includes evacuation literacy, and hope is measured in functioning wetlands, shaded transit, and food arriving before the next heat dome.</p>
               <div id="world-scene" class="world-scene era-scene-2080" aria-label="CSS-only cinematic world scene for the selected era">
                 <div class="scene-sky" aria-hidden="true"></div>
                 <div class="scene-glow" aria-hidden="true"></div>
@@ -159,10 +159,45 @@
               <div class="era-facts" aria-label="Selected era details">
                 <div><span>Planet Status</span><strong id="era-planet-status">Strained adaptation network</strong></div>
                 <div><span>Climate Condition</span><strong id="era-climate-condition">Hot, volatile, partially managed</strong></div>
-                <div><span>Dominant Species</span><strong id="era-dominant-species">Humans and assisted urban biomes</strong></div>
-                <div><span>Civilization State</span><strong id="era-civilization-state">Coastal defense and relocation compacts</strong></div>
+                <div><span>Dominant Species</span><strong id="era-dominant-species">Humans, assisted city biomes, and heat-hardened coastal species</strong></div>
+                <div><span>Civilization State</span><strong id="era-civilization-state">Coastal defense federations, inland relocation compacts, and food-web logistics</strong></div>
                 <div><span>Risk Level</span><strong id="era-risk-level">High volatility</strong></div>
               </div>
+              <details class="era-deep-archive" open>
+                <summary>Era archive dossier</summary>
+                <div class="era-dossier-grid">
+                  <article>
+                    <h4>Major World Events</h4>
+                    <ul id="era-major-events">
+                      <li>The Equatorial Heat Compact links tropical cities into a shared cooling, water, and evacuation network.</li>
+                      <li>The North Atlantic Retreat Charter funds managed withdrawal from repeatedly flooded heritage districts.</li>
+                      <li>The First Urban Biome Rights Case recognizes engineered mangrove belts as protected public infrastructure.</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h4>Ecological Consequences</h4>
+                    <ul id="era-ecological-consequences">
+                      <li>Coastal wetlands become hybrid flood machines, nursery habitats, and memorial landscapes for drowned neighborhoods.</li>
+                      <li>Heat-tolerant pests and pollinators expand into cities, forcing parks, rooftops, and farms into active ecological management.</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h4>Civilization Consequences</h4>
+                    <ul id="era-civilization-consequences">
+                      <li>Climate migration becomes a permanent civic system with receiving cities designed around modular schools, clinics, and work zones.</li>
+                      <li>Insurance, sovereignty, and property law shift from fixed maps to moving risk corridors updated every season.</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h4>Species, Risk, Mystery</h4>
+                    <dl class="era-dossier-list">
+                      <div><dt>Representative Species</dt><dd id="era-representative-species">Coral Architect larvae in assisted reef nurseries begin forming storm-buffer lattices along tropical coasts.</dd></div>
+                      <div><dt>Long-Term Risk</dt><dd id="era-long-term-risk">Adaptation fatigue could fracture cooperation if wealthy shield zones survive while exposed regions are repeatedly abandoned.</dd></div>
+                      <div><dt>Future Mystery</dt><dd id="era-future-mystery">Several flood AIs independently begin reserving dry land for species not yet cataloged by any human survey.</dd></div>
+                    </dl>
+                  </article>
+                </div>
+              </details>
               <div class="indicator-grid" aria-label="Planetary visual indicators">
                 <div class="indicator-card">
                   <div><span>Climate Pressure</span><strong id="indicator-climate-value">82%</strong></div>
@@ -184,16 +219,17 @@
               <div class="timeline-event-preview" aria-label="World Event Log preview">
                 <div class="event-log-heading">World Event Log Preview</div>
                 <ul id="world-event-list">
-                  <li>Coastal shield gates close before the equatorial surge window.</li>
-                  <li>Adaptive towers redirect heat through luminous rooftop exchangers.</li>
-                  <li>Migration compacts route millions through protected inland corridors.</li>
-                  <li>AI flood models reroute emergency food webs through inland rail forests.</li>
+                  <li>2081 — The Equatorial Heat Compact synchronizes shade satellites and emergency water trains.</li>
+                  <li>2086 — The North Atlantic Retreat Charter buys out districts below the Third Surge Line.</li>
+                  <li>2092 — AI flood models reroute grain, medicine, and seed stock through inland rail forests.</li>
+                  <li>2097 — Adaptive mangrove towers redirect heat through rooftop exchangers and tidal root basements.</li>
+                  <li>2099 — The Great Lakes Arrival Grid opens climate citizenship offices inside stadium farms.</li>
                 </ul>
               </div>
             </div>
           </article>
         </div>
-        <p class="version-note reveal">V5 introduces the first layer of fate-based world interaction.</p>
+        <p class="version-note reveal">V5.1 deepens the archive with era consequences, representative species records, future mysteries, and more specific world events.</p>
       </section>
 
       <section id="world-events" class="content-section world-event-archive" aria-labelledby="world-events-title">
@@ -217,12 +253,13 @@
               <strong id="event-log-era">2080</strong>
             </div>
             <h3 id="event-log-title">2080 · Climate Adaptation Era</h3>
-            <p id="event-log-summary">The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.</p>
+            <p id="event-log-summary">By 2080, Earth feels close and loud: seawalls breathe with storm forecasts, reflective rooftops shimmer above heat-stressed streets, and every river delta is watched like a patient in critical care. Humanity has not escaped the climate crisis; it has learned to live inside a planet-sized emergency room where adaptation is daily labor, citizenship includes evacuation literacy, and hope is measured in functioning wetlands, shaded transit, and food arriving before the next heat dome.</p>
             <div id="event-records" class="event-record-grid">
-              <article class="event-record"><span>Climate disaster</span><p>Coastal shield gates close before the equatorial surge window.</p></article>
-              <article class="event-record"><span>Species adaptation</span><p>Adaptive mangrove towers redirect heat through luminous rooftop exchangers.</p></article>
-              <article class="event-record"><span>Civilization decision</span><p>Migration compacts route millions through protected inland corridors.</p></article>
-              <article class="event-record"><span>AI intervention</span><p>AI flood models reroute emergency food webs through inland rail forests.</p></article>
+              <article class="event-record"><span>2081 — Heat governance</span><p>The Equatorial Heat Compact synchronizes shade satellites, district cooling vaults, and emergency water trains from Lagos to Jakarta.</p></article>
+              <article class="event-record"><span>2086 — Coastal retreat</span><p>The North Atlantic Retreat Charter buys out the last permanent neighborhoods below the Third Surge Line.</p></article>
+              <article class="event-record"><span>2092 — Food-web logistics</span><p>AI flood models reroute emergency grain, medicine, and seed stock through inland rail forests during the Bengal double-cyclone season.</p></article>
+              <article class="event-record"><span>2097 — Urban ecology</span><p>Adaptive mangrove towers in Miami-Dade begin redirecting heat through luminous rooftop exchangers and tidal root basements.</p></article>
+              <article class="event-record"><span>2099 — Migration compact</span><p>The Great Lakes Arrival Grid opens climate citizenship offices inside converted stadium farms and elevated transit hubs.</p></article>
             </div>
           </article>
         </div>
@@ -325,14 +362,49 @@
             <p class="console-label">Selected lifeform fate</p>
             <h3 id="lifeform-title">Coral Architect</h3>
             <dl class="fate-detail-grid">
-              <div><dt>Habitat</dt><dd id="lifeform-habitat">Warm shallow seas, artificial reef belts, and restored continental shelves.</dd></div>
-              <div><dt>Survival Pressure</dt><dd id="lifeform-pressure">Ocean acidity, storm surge, heat pulses, and competition for mineral scaffolds.</dd></div>
-              <div><dt>Evolutionary Advantage</dt><dd id="lifeform-advantage">Bioelectric colonies grow mineral lattices that buffer storms and shelter nurseries.</dd></div>
-              <div><dt>Possible Fate</dt><dd id="lifeform-fate-text">May become a continent-scale reef civilization foundation or collapse into fossilized storm walls.</dd></div>
-              <div><dt>Relationship with Civilization</dt><dd id="lifeform-civilization">Protected by floating research states, then slowly granted autonomy as a living coastal defense system.</dd></div>
+              <div><dt>Origin</dt><dd id="lifeform-origin">Descended from assisted coral nurseries, mineral-printing microbes, and storm-buffer reef experiments launched during the late twenty-first century.</dd></div>
+              <div><dt>Habitat</dt><dd id="lifeform-habitat">Warm shallow seas, artificial reef belts, restored continental shelves, and tide-battered foundations of floating cities.</dd></div>
+              <div><dt>Survival Pressure</dt><dd id="lifeform-pressure">Ocean acidity, storm surge, marine heat pulses, invasive algae, and competition for scarce carbonate minerals.</dd></div>
+              <div><dt>Evolutionary Advantage</dt><dd id="lifeform-advantage">Bioelectric colonies coordinate growth, harden mineral lattices before storms, and shelter fish nurseries inside self-repairing chambers.</dd></div>
+              <div><dt>Relationship with Civilization</dt><dd id="lifeform-civilization">Protected by floating research states at first, then slowly granted legal autonomy as a living coastal defense and food-web partner.</dd></div>
+              <div><dt>Possible Extinction Path</dt><dd id="lifeform-extinction">If acidity spikes faster than mineral scaffolds can form, the colonies bleach into brittle storm walls and survive only as fossil architecture.</dd></div>
+              <div><dt>Possible Ascension Path</dt><dd id="lifeform-ascension">If linked to reef intelligences, Coral Architects could become continent-scale living infrastructure that negotiates coastal boundaries with cities.</dd></div>
+              <div><dt>Final Fate Summary</dt><dd id="lifeform-fate-text">A builder species balanced between infrastructure and personhood: either the foundation of ocean civilization or the most beautiful ruin of failed repair.</dd></div>
             </dl>
-            <p class="version-note">V5 introduces the first layer of fate-based world interaction.</p>
+            <p class="version-note">V5.1 expands each lifeform into an origin, pressure, extinction, ascension, and final fate record.</p>
           </article>
+        </div>
+      </section>
+
+      <section id="archives" class="content-section future-archives" aria-labelledby="archives-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Future Earth Archives</p>
+          <h2 id="archives-title">Six archive rooms for a planet that keeps changing.</h2>
+          <p>These archive cards organize the deep-time record into readable collections: climate, ocean, species, civilization, ruins, and the nearly unreadable scale of geological memory.</p>
+        </div>
+        <div class="archive-card-grid">
+          <article class="archive-card reveal"><span>Climate Archive</span><h3>Heat, ice, rain, and atmospheric memory</h3><p>The Climate Archive stores turning points rather than averages: the last unassisted monsoon, the first successful city-scale heat refuge, the carbon chime that confirmed stabilization, and the regional failures that forced retreat. Its records are practical and moral at once, showing which communities were protected, which were asked to move, and which climate systems were allowed to heal slowly instead of being forced into another emergency intervention.</p></article>
+          <article class="archive-card reveal"><span>Ocean Archive</span><h3>Treaties written in current, salt, and pressure</h3><p>The Ocean Archive follows the seas from crisis zone to political body. It documents floating reef cities, current engines, kelp sanctuaries, abyssal listening courts, and the first disputes between human law and non-human marine intelligence. Later entries become less human-centered, recording pressure songs, oxygen recoveries, and deep reef memories that outlast surface nations by geological margins.</p></article>
+          <article class="archive-card reveal"><span>Species Archive</span><h3>Adaptation as biography</h3><p>The Species Archive treats every organism as a historical witness. Coral Architects reveal how defense infrastructure became living habitat, Dune Mycelium records the politics of water, Polar Glasswings carry fragments of ancient genomes, and Night Reef Intelligence challenges the assumption that memory requires a brain shaped like ours. The archive is not a bestiary; it is a record of survival contracts between bodies and worlds.</p></article>
+          <article class="archive-card reveal"><span>Civilization Archive</span><h3>Governance after planetary certainty</h3><p>The Civilization Archive tracks how societies changed when fixed borders, stable coastlines, and predictable seasons stopped being reliable foundations. It includes relocation compacts, watershed citizenship, machine-guided restoration, orbital industry, quiet cities, and custodial cultures that exist mainly to protect knowledge. Its deepest lesson is that civilization survives longest when it becomes less obsessed with permanence and more skilled at repair.</p></article>
+          <article class="archive-card reveal"><span>Ruins Archive</span><h3>When buildings become ecosystems</h3><p>The Ruins Archive begins with abandoned roads and flooded stations, then follows them into stranger roles: cliffs for nesting animals, caves for fungi, mineral reservoirs for root systems, and sacred maintenance sites for machine monks. It refuses to frame ruins only as failure. In many eras, old infrastructure becomes ecological scaffolding, proving that even collapse can leave shapes life knows how to use.</p></article>
+          <article class="archive-card reveal"><span>Deep Time Archive</span><h3>The record after records</h3><p>The Deep Time Archive is built for humility. At one million years, human history is already a chemical accent; at one hundred million, it is folded into mountains, seams, and unexplained geometries. This archive asks what can remain meaningful when language, species, coastlines, and stars have shifted beyond recognition. Its answer is not certainty but pattern: care leaves traces, even when no one remains to call them care.</p></article>
+        </div>
+      </section>
+
+      <section id="narrative-seeds" class="content-section narrative-seeds" aria-labelledby="narrative-seeds-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Narrative Seeds</p>
+          <h2 id="narrative-seeds-title">Story openings from the future Earth archive.</h2>
+          <p>Each seed is a compact doorway into the setting, designed to make the archive feel inhabited rather than merely described.</p>
+        </div>
+        <div class="seed-grid">
+          <article class="seed-card reveal"><span>Floating reef city</span><p>A child born in a floating reef city learns that their first legal guardian is not a parent or state, but the Coral Architect colony holding the city above storm water.</p></article>
+          <article class="seed-card reveal"><span>Machine monk</span><p>A machine monk guarding a dead city wakes for its century of maintenance and finds fresh footprints in dust that should have been sealed for ten thousand years.</p></article>
+          <article class="seed-card reveal"><span>Fungal memory</span><p>A fungus network remembering human languages begins speaking in lost dialects through desert flowers, but every translation changes the map of nearby wells.</p></article>
+          <article class="seed-card reveal"><span>Polar carrier</span><p>A polar insect carrying ancient genetic code lands on a researcher's hand, and its wing pattern contains a species the archive says was never saved.</p></article>
+          <article class="seed-card reveal"><span>Restored continent</span><p>A post-human traveler crossing a restored continent must ask permission from herds, rivers, and fungal borders before reaching the buried city where their ancestor was born.</p></article>
+          <article class="seed-card reveal"><span>Orbital debris</span><p>A deep-ocean intelligence watching orbital debris fall realizes one descending fragment is not wreckage but a message deliberately delayed for a million years.</p></article>
         </div>
       </section>
 
@@ -371,7 +443,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Climate shift</p>
           <h2 id="climate-title">Variables shaping the future planet.</h2>
-          <p>V5 keeps a dashboard-style climate layer while adding cinematic visual era rendering to planetary pressure and recovery signals.</p>
+          <p>V5.1 keeps a dashboard-style climate layer while adding cinematic visual era rendering to planetary pressure and recovery signals.</p>
         </div>
         <div class="climate-grid">
           <article class="climate-card reveal"><span>Temperature Rise</span><strong>+2.7°C</strong><p>Mid-range warming pressure used to test adaptation thresholds.</p></article>
@@ -386,7 +458,7 @@
         <div class="about-panel reveal">
           <p class="eyebrow">Project vision</p>
           <h2 id="vision-title">From static concept to living simulation atlas.</h2>
-          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V5 expands the foundation with world event archives, fate-based lifeform records, CSS-only world scenes, and animated metrics while keeping the experience fast, static, and ready for Vercel.</p>
+          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V5.1 expands the foundation with world event archives, fate-based lifeform records, CSS-only world scenes, and animated metrics while keeping the experience fast, static, and ready for Vercel.</p>
         </div>
       </section>
 
@@ -401,7 +473,7 @@
           <article class="roadmap-card reveal" role="listitem"><span>V2</span><h3>Expanded content architecture</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V4</span><h3>Visual era rendering</h3></article>
-          <article class="roadmap-card reveal current" role="listitem"><span>V5</span><h3>World events and lifeform fate</h3></article>
+          <article class="roadmap-card reveal current" role="listitem"><span>V5.1</span><h3>Deep content expansion</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V6</span><h3>3D planetary simulation</h3></article>
         </div>
       </section>
