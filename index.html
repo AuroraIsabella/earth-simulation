@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Earth Simulation V2 is a cinematic speculative future-history platform for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
-  <title>Earth Simulation V2 | A Future Planet Engine</title>
+  <meta name="description" content="Earth Simulation V3 is an interactive speculative future-history platform for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
+  <title>Earth Simulation V3 | Interactive Future Planet Engine</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Planetary future engine</p>
           <h1 id="hero-title">Earth Simulation: A Future Planet Engine</h1>
-          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V2 concept turns the planet into a cinematic model of adaptive worlds yet to come.</p>
+          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V3 interface turns the planet into an interactive cinematic model of adaptive worlds yet to come.</p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="#timeline">Explore the timeline</a>
             <a class="button button-secondary" href="#civilization">Run civilization model</a>
@@ -95,56 +95,78 @@
         </div>
       </section>
 
-      <section id="timeline" class="content-section" aria-labelledby="timeline-title">
+      <section id="timeline" class="content-section timeline-simulator" aria-labelledby="timeline-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">Future timeline</p>
-          <h2 id="timeline-title">From adaptation century to deep Earth renewal.</h2>
-          <p>Each age imagines how geology, atmosphere, oceans, life, and intelligence could reshape the planet in a speculative simulation.</p>
+          <p class="eyebrow">Future timeline control system</p>
+          <h2 id="timeline-title">Select an era and run the future panel.</h2>
+          <p>V3 turns the timeline into an interactive simulation console. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
         </div>
-        <div class="timeline" role="list">
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">2080</span>
-            <div>
-              <h3>Climate Adaptation Era</h3>
-              <p>Coastal shields, vertical farms, migration compacts, and urban cooling forests become essential planetary infrastructure.</p>
+        <div class="timeline-console reveal">
+          <div class="timeline-control-rail" aria-label="Future era controls">
+            <button class="timeline-era-button active" type="button" data-era="2080" aria-pressed="true">
+              <span class="timeline-year">2080</span>
+              <span>Climate Adaptation Era</span>
+            </button>
+            <button class="timeline-era-button" type="button" data-era="2300" aria-pressed="false">
+              <span class="timeline-year">2300</span>
+              <span>Ocean Engineering Age</span>
+            </button>
+            <button class="timeline-era-button" type="button" data-era="5000" aria-pressed="false">
+              <span class="timeline-year">5000</span>
+              <span>Rewilded Continents</span>
+            </button>
+            <button class="timeline-era-button" type="button" data-era="50000" aria-pressed="false">
+              <span class="timeline-year">50,000</span>
+              <span>Post-Human Ecologies</span>
+            </button>
+            <button class="timeline-era-button" type="button" data-era="1000000" aria-pressed="false">
+              <span class="timeline-year">1,000,000</span>
+              <span>New Biosphere Equilibrium</span>
+            </button>
+            <button class="timeline-era-button" type="button" data-era="100000000" aria-pressed="false">
+              <span class="timeline-year">100,000,000</span>
+              <span>Deep Earth Renewal</span>
+            </button>
+          </div>
+
+          <article class="era-simulation-panel" aria-live="polite" aria-atomic="true">
+            <div class="panel-status-bar">
+              <span>Era simulation online</span>
+              <span id="era-risk-chip">High volatility</span>
             </div>
-          </article>
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">2300</span>
-            <div>
-              <h3>Ocean Engineering Age</h3>
-              <p>Autonomous reefs, carbon kelp arrays, floating laboratories, and current stabilizers turn oceans into responsive ecosystems.</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">5000</span>
-            <div>
-              <h3>Rewilded Continents</h3>
-              <p>Large migration corridors allow engineered and naturally adapted species to repopulate recovered landscapes.</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">50,000</span>
-            <div>
-              <h3>Post-Human Ecologies</h3>
-              <p>Abandoned megastructures become cliffs, reefs, nesting towers, and mineral reservoirs for emergent ecosystems.</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">1,000,000</span>
-            <div>
-              <h3>New Biosphere Equilibrium</h3>
-              <p>Continents shift, atmospheric cycles stabilize, and novel ecosystems evolve beyond human design.</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal" role="listitem">
-            <span class="timeline-year">100,000,000</span>
-            <div>
-              <h3>Deep Earth Renewal</h3>
-              <p>Tectonic renewal, ocean chemistry, and long biological selection rewrite the planet into a distant living world.</p>
+            <div class="era-panel-content">
+              <p class="console-label">Selected era</p>
+              <h3 id="era-title">2080 · Climate Adaptation Era</h3>
+              <p id="era-description">The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.</p>
+              <div class="era-facts" aria-label="Selected era details">
+                <div><span>Planet Status</span><strong id="era-planet-status">Strained adaptation network</strong></div>
+                <div><span>Climate Condition</span><strong id="era-climate-condition">Hot, volatile, partially managed</strong></div>
+                <div><span>Dominant Species</span><strong id="era-dominant-species">Humans and assisted urban biomes</strong></div>
+                <div><span>Civilization State</span><strong id="era-civilization-state">Coastal defense and relocation compacts</strong></div>
+                <div><span>Risk Level</span><strong id="era-risk-level">High volatility</strong></div>
+              </div>
+              <div class="indicator-grid" aria-label="Planetary visual indicators">
+                <div class="indicator-card">
+                  <div><span>Climate pressure</span><strong id="indicator-climate-value">82%</strong></div>
+                  <span class="indicator-track"><span id="indicator-climate-bar" style="width: 82%"></span></span>
+                </div>
+                <div class="indicator-card">
+                  <div><span>Biodiversity recovery</span><strong id="indicator-biodiversity-value">31%</strong></div>
+                  <span class="indicator-track"><span id="indicator-biodiversity-bar" style="width: 31%"></span></span>
+                </div>
+                <div class="indicator-card">
+                  <div><span>Civilization complexity</span><strong id="indicator-civilization-value">76%</strong></div>
+                  <span class="indicator-track"><span id="indicator-civilization-bar" style="width: 76%"></span></span>
+                </div>
+                <div class="indicator-card">
+                  <div><span>Planet stability</span><strong id="indicator-stability-value">38%</strong></div>
+                  <span class="indicator-track"><span id="indicator-stability-bar" style="width: 38%"></span></span>
+                </div>
+              </div>
             </div>
           </article>
         </div>
+        <p class="version-note reveal">V3 introduces interactive era switching. Future versions will connect AI-generated scenarios and 3D planetary visualization.</p>
       </section>
 
       <section id="species" class="content-section" aria-labelledby="species-title">
@@ -246,7 +268,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Climate shift</p>
           <h2 id="climate-title">Variables shaping the future planet.</h2>
-          <p>V2 introduces a dashboard-style climate layer for reading planetary pressure and recovery signals.</p>
+          <p>V3 keeps a dashboard-style climate layer for reading planetary pressure and recovery signals.</p>
         </div>
         <div class="climate-grid">
           <article class="climate-card reveal"><span>Temperature Rise</span><strong>+2.7°C</strong><p>Mid-range warming pressure used to test adaptation thresholds.</p></article>
@@ -261,7 +283,7 @@
         <div class="about-panel reveal">
           <p class="eyebrow">Project vision</p>
           <h2 id="vision-title">From static concept to living simulation atlas.</h2>
-          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V2 expands the foundation while keeping the experience fast, static, and ready for Vercel.</p>
+          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V3 expands the foundation with interactive era switching while keeping the experience fast, static, and ready for Vercel.</p>
         </div>
       </section>
 
@@ -273,8 +295,8 @@
         </div>
         <div class="roadmap-grid" role="list">
           <article class="roadmap-card reveal" role="listitem"><span>V1</span><h3>Cinematic concept website</h3></article>
-          <article class="roadmap-card reveal current" role="listitem"><span>V2</span><h3>Expanded content architecture</h3></article>
-          <article class="roadmap-card reveal" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
+          <article class="roadmap-card reveal" role="listitem"><span>V2</span><h3>Expanded content architecture</h3></article>
+          <article class="roadmap-card reveal current" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V4</span><h3>AI-generated scenarios</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V5</span><h3>User-created worlds</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V6</span><h3>3D planetary simulation</h3></article>
