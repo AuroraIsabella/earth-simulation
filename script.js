@@ -18,6 +18,7 @@ siteNav.querySelectorAll('a').forEach((link) => {
 const eras = {
   2080: {
     title: '2080 · Climate Adaptation Era',
+    archiveYear: '2080',
     planetStatus: 'Strained adaptation network',
     climateCondition: 'Hot, volatile, partially managed',
     dominantSpecies: 'Humans and assisted urban biomes',
@@ -27,9 +28,10 @@ const eras = {
     sceneClass: 'era-scene-2080',
     sceneCaption: 'World Scene · Climate-adaptive megacity, heat glow, coastal shields',
     events: [
-      'Coastal shield gates close before the equatorial surge window.',
-      'Adaptive towers redirect heat through luminous rooftop exchangers.',
-      'Migration compacts route millions through protected inland corridors.'
+      { type: 'Climate disaster', text: 'Coastal shield gates close before the equatorial surge window.' },
+      { type: 'Species adaptation', text: 'Adaptive mangrove towers redirect heat through luminous rooftop exchangers.' },
+      { type: 'Civilization decision', text: 'Migration compacts route millions through protected inland corridors.' },
+      { type: 'AI intervention', text: 'AI flood models reroute emergency food webs through inland rail forests.' }
     ],
     indicators: {
       climate: 82,
@@ -40,6 +42,7 @@ const eras = {
   },
   2300: {
     title: '2300 · Ocean Engineering Age',
+    archiveYear: '2300',
     planetStatus: 'Marine systems under active repair',
     climateCondition: 'Warming plateau with engineered currents',
     dominantSpecies: 'Humans, reef intelligences, and carbon kelp',
@@ -49,9 +52,10 @@ const eras = {
     sceneClass: 'era-scene-2300',
     sceneCaption: 'World Scene · Ocean engineering, blue currents, floating research platforms',
     events: [
-      'Current engines synchronize across the Pacific repair belt.',
-      'Floating laboratories seed carbon kelp beneath storm-bright skies.',
-      'Reef intelligences map safe harbors through blue acoustic signals.'
+      { type: 'Ocean engineering accident', text: 'A current engine stalls and sends warm gyres through protected reef nurseries.' },
+      { type: 'Ecological breakthrough', text: 'Floating laboratories seed carbon kelp beneath storm-bright skies.' },
+      { type: 'Species adaptation', text: 'Reef intelligences map safe harbors through blue acoustic signals.' },
+      { type: 'Civilization decision', text: 'Ocean states vote to slow terraforming until marine minds can be consulted.' }
     ],
     indicators: {
       climate: 64,
@@ -62,6 +66,7 @@ const eras = {
   },
   5000: {
     title: '5000 · Rewilded Continents',
+    archiveYear: '5000',
     planetStatus: 'Continental recovery corridors expanding',
     climateCondition: 'Warm but more predictable',
     dominantSpecies: 'Hybrid megafauna and resilient pollinators',
@@ -71,9 +76,10 @@ const eras = {
     sceneClass: 'era-scene-5000',
     sceneCaption: 'World Scene · Rewilded continents, green migration corridors',
     events: [
-      'Megafauna herds enter the northern corridor without human escort.',
-      'Former highways bloom into pollinator rivers and canopy bridges.',
-      'Low-footprint cities dim their lights for continent-scale migrations.'
+      { type: 'Species adaptation', text: 'Megafauna herds enter the northern corridor without human escort.' },
+      { type: 'Ecological breakthrough', text: 'Former highways bloom into pollinator rivers and canopy bridges.' },
+      { type: 'Civilization decision', text: 'Low-footprint cities dim their lights for continent-scale migrations.' },
+      { type: 'Archive discovery', text: 'Children decode a buried seed vault and release extinct prairie symbionts.' }
     ],
     indicators: {
       climate: 42,
@@ -84,6 +90,7 @@ const eras = {
   },
   50000: {
     title: '50,000 · Post-Human Ecologies',
+    archiveYear: '50,000',
     planetStatus: 'Megastructures absorbed into ecosystems',
     climateCondition: 'Regional equilibrium with wild extremes',
     dominantSpecies: 'Distributed reef minds and adaptive mammals',
@@ -93,9 +100,10 @@ const eras = {
     sceneClass: 'era-scene-50000',
     sceneCaption: 'World Scene · Post-human ruins, glowing forests, abandoned megastructures',
     events: [
-      'A vertical ruin sheds solar glass into a glowing forest canopy.',
-      'Archive drones wake briefly as vines bridge the transit canyon.',
-      'Nocturnal forests pulse around abandoned megastructure shadows.'
+      { type: 'Post-human ruin discovery', text: 'A vertical ruin sheds solar glass into a glowing forest canopy.' },
+      { type: 'AI intervention', text: 'Archive drones wake briefly as vines bridge the transit canyon.' },
+      { type: 'New biosphere emergence', text: 'Nocturnal forests pulse around abandoned megastructure shadows.' },
+      { type: 'Species adaptation', text: 'Tunnel mammals learn to navigate by reading dormant transit magnets.' }
     ],
     indicators: {
       climate: 35,
@@ -106,6 +114,7 @@ const eras = {
   },
   1000000: {
     title: '1,000,000 · New Biosphere Equilibrium',
+    archiveYear: '1,000,000',
     planetStatus: 'Novel biosphere stabilized',
     climateCondition: 'Slow-cycle planetary balance',
     dominantSpecies: 'New clades beyond human taxonomy',
@@ -115,9 +124,10 @@ const eras = {
     sceneClass: 'era-scene-1000000',
     sceneCaption: 'World Scene · New biosphere equilibrium, strange ecosystems',
     events: [
-      'Strange canopy organisms open reflective blooms at dusk.',
-      'Machine custodians register a stable million-year carbon rhythm.',
-      'New clades cross mineral wetlands along bioluminescent trails.'
+      { type: 'New biosphere emergence', text: 'Strange canopy organisms open reflective blooms at dusk.' },
+      { type: 'AI intervention', text: 'Machine custodians register a stable million-year carbon rhythm.' },
+      { type: 'Species adaptation', text: 'New clades cross mineral wetlands along bioluminescent trails.' },
+      { type: 'Civilization echo', text: 'A fossil antenna broadcasts one final map into an empty orbital band.' }
     ],
     indicators: {
       climate: 24,
@@ -128,6 +138,7 @@ const eras = {
   },
   100000000: {
     title: '100,000,000 · Deep Earth Renewal',
+    archiveYear: '100,000,000',
     planetStatus: 'Tectonic renewal complete',
     climateCondition: 'Alien-stable atmosphere and ocean chemistry',
     dominantSpecies: 'Deep-time descendants and planetary symbionts',
@@ -137,9 +148,10 @@ const eras = {
     sceneClass: 'era-scene-100000000',
     sceneCaption: 'World Scene · Deep Earth renewal, alien continents, volcanic atmosphere',
     events: [
-      'Volcanic skies stain new coastlines with copper atmospheric light.',
-      'Alien continents split along newborn mountain-fire seams.',
-      'Deep-time symbionts colonize basalt shelves above forgotten fossils.'
+      { type: 'Climate transformation', text: 'Volcanic skies stain new coastlines with copper atmospheric light.' },
+      { type: 'Geological rupture', text: 'Alien continents split along newborn mountain-fire seams.' },
+      { type: 'New biosphere emergence', text: 'Deep-time symbionts colonize basalt shelves above forgotten fossils.' },
+      { type: 'Post-human ruin discovery', text: 'A subducted archive resurfaces as a diamond seam of unreadable cities.' }
     ],
     indicators: {
       climate: 18,
@@ -150,7 +162,43 @@ const eras = {
   }
 };
 
+const lifeforms = {
+  coral: {
+    title: 'Coral Architect',
+    habitat: 'Warm shallow seas, artificial reef belts, and restored continental shelves.',
+    pressure: 'Ocean acidity, storm surge, heat pulses, and competition for mineral scaffolds.',
+    advantage: 'Bioelectric colonies grow mineral lattices that buffer storms and shelter nurseries.',
+    fate: 'May become a continent-scale reef civilization foundation or collapse into fossilized storm walls.',
+    civilization: 'Protected by floating research states, then slowly granted autonomy as a living coastal defense system.'
+  },
+  dune: {
+    title: 'Dune Mycelium',
+    habitat: 'Desertified interiors, buried aquifers, and semi-arid transition zones.',
+    pressure: 'Heat spikes, water scarcity, soil collapse, and migrating sand seas.',
+    advantage: 'Underground fungal webs trade moisture and nutrients across vast sand corridors.',
+    fate: 'Could knit deserts into living water maps or become a dormant memory web beneath glass dunes.',
+    civilization: 'Early settlements farm it for soil recovery, but later communities treat it as a territorial partner.'
+  },
+  polar: {
+    title: 'Polar Glasswing',
+    habitat: 'Recovered polar wetlands, reflective ice marshes, and engineered lichen forests.',
+    pressure: 'Unstable freeze cycles, low sunlight, predator migration, and habitat fragmentation.',
+    advantage: 'Transparent thermal membranes capture weak sunlight while mirror scales reduce heat loss.',
+    fate: 'May guide the return of polar pollination or vanish when the last managed ice marsh fails.',
+    civilization: 'Climate archivists monitor its wings as living indicators of polar recovery.'
+  },
+  night: {
+    title: 'Night Reef Intelligence',
+    habitat: 'Deep twilight reefs, volcanic vents, and dark ocean observatories.',
+    pressure: 'Acid plumes, pressure shifts, synthetic noise, and contested data reefs.',
+    advantage: 'Distributed neural polyps communicate through pressure pulses and bioluminescent code.',
+    fate: 'Could become Earth\'s first non-human ocean archive or retreat into silent abyssal reef cities.',
+    civilization: 'Human and machine governments negotiate with it for climate memory, navigation, and ethical repair.'
+  }
+};
+
 const eraButtons = document.querySelectorAll('.timeline-era-button');
+const eventEraButtons = document.querySelectorAll('.event-era-button');
 const eraPanelContent = document.querySelector('.era-panel-content');
 const eraTitle = document.querySelector('#era-title');
 const eraDescription = document.querySelector('#era-description');
@@ -163,6 +211,10 @@ const eraRiskChip = document.querySelector('#era-risk-chip');
 const worldScene = document.querySelector('#world-scene');
 const sceneCaption = document.querySelector('.scene-caption');
 const worldEventList = document.querySelector('#world-event-list');
+const eventLogEra = document.querySelector('#event-log-era');
+const eventLogTitle = document.querySelector('#event-log-title');
+const eventLogSummary = document.querySelector('#event-log-summary');
+const eventRecords = document.querySelector('#event-records');
 const sceneClasses = Object.values(eras).map((era) => era.sceneClass);
 const eraIndicatorElements = {
   climate: {
@@ -183,6 +235,44 @@ const eraIndicatorElements = {
   }
 };
 
+function setPressedState(buttons, eraKey) {
+  buttons.forEach((button) => {
+    const isActive = button.dataset.era === eraKey;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+
+function renderEventPreview(era) {
+  worldEventList.replaceChildren(...era.events.map((event) => {
+    const eventItem = document.createElement('li');
+    eventItem.textContent = `${event.type}: ${event.text}`;
+    return eventItem;
+  }));
+}
+
+function renderWorldEventArchive(era) {
+  eventLogEra.textContent = era.archiveYear;
+  eventLogTitle.textContent = era.title;
+  eventLogSummary.textContent = era.description;
+  eventRecords.classList.add('switching');
+
+  window.setTimeout(() => {
+    eventRecords.replaceChildren(...era.events.map((event) => {
+      const eventCard = document.createElement('article');
+      const eventType = document.createElement('span');
+      const eventText = document.createElement('p');
+
+      eventCard.className = 'event-record';
+      eventType.textContent = event.type;
+      eventText.textContent = event.text;
+      eventCard.append(eventType, eventText);
+      return eventCard;
+    }));
+    eventRecords.classList.remove('switching');
+  }, 140);
+}
+
 function updateEraPanel(eraKey) {
   const era = eras[eraKey];
 
@@ -197,11 +287,10 @@ function updateEraPanel(eraKey) {
   worldScene.classList.remove(...sceneClasses);
   worldScene.classList.add(era.sceneClass);
   sceneCaption.textContent = era.sceneCaption;
-  worldEventList.replaceChildren(...era.events.map((eventText) => {
-    const eventItem = document.createElement('li');
-    eventItem.textContent = eventText;
-    return eventItem;
-  }));
+  renderEventPreview(era);
+  renderWorldEventArchive(era);
+  setPressedState(eraButtons, eraKey);
+  setPressedState(eventEraButtons, eraKey);
 
   Object.entries(era.indicators).forEach(([indicator, percentage]) => {
     eraIndicatorElements[indicator].value.textContent = `${percentage}%`;
@@ -209,23 +298,20 @@ function updateEraPanel(eraKey) {
   });
 }
 
+function selectEra(eraKey) {
+  eraPanelContent.classList.add('switching');
+  window.setTimeout(() => {
+    updateEraPanel(eraKey);
+    eraPanelContent.classList.remove('switching');
+  }, 180);
+}
+
 eraButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const eraKey = button.dataset.era;
+  button.addEventListener('click', () => selectEra(button.dataset.era));
+});
 
-    eraButtons.forEach((currentButton) => {
-      currentButton.classList.remove('active');
-      currentButton.setAttribute('aria-pressed', 'false');
-    });
-    button.classList.add('active');
-    button.setAttribute('aria-pressed', 'true');
-
-    eraPanelContent.classList.add('switching');
-    window.setTimeout(() => {
-      updateEraPanel(eraKey);
-      eraPanelContent.classList.remove('switching');
-    }, 180);
-  });
+eventEraButtons.forEach((button) => {
+  button.addEventListener('click', () => selectEra(button.dataset.era));
 });
 
 const scenarios = {
@@ -284,6 +370,34 @@ scenarioButtons.forEach((button) => {
     metricBiodiversity.textContent = scenario.biodiversity;
     metricExpansion.textContent = scenario.expansion;
     metricRisk.textContent = scenario.risk;
+  });
+});
+
+const lifeformButtons = document.querySelectorAll('.lifeform-card');
+const lifeformTitle = document.querySelector('#lifeform-title');
+const lifeformHabitat = document.querySelector('#lifeform-habitat');
+const lifeformPressure = document.querySelector('#lifeform-pressure');
+const lifeformAdvantage = document.querySelector('#lifeform-advantage');
+const lifeformFateText = document.querySelector('#lifeform-fate-text');
+const lifeformCivilization = document.querySelector('#lifeform-civilization');
+
+lifeformButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const lifeform = lifeforms[button.dataset.lifeform];
+
+    lifeformButtons.forEach((currentButton) => {
+      currentButton.classList.remove('active');
+      currentButton.setAttribute('aria-pressed', 'false');
+    });
+    button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
+
+    lifeformTitle.textContent = lifeform.title;
+    lifeformHabitat.textContent = lifeform.habitat;
+    lifeformPressure.textContent = lifeform.pressure;
+    lifeformAdvantage.textContent = lifeform.advantage;
+    lifeformFateText.textContent = lifeform.fate;
+    lifeformCivilization.textContent = lifeform.civilization;
   });
 });
 
