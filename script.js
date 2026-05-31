@@ -24,6 +24,13 @@ const eras = {
     civilizationState: 'Coastal defense and relocation compacts',
     riskLevel: 'High volatility',
     description: 'The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.',
+    sceneClass: 'era-scene-2080',
+    sceneCaption: 'World Scene · Climate-adaptive megacity, heat glow, coastal shields',
+    events: [
+      'Coastal shield gates close before the equatorial surge window.',
+      'Adaptive towers redirect heat through luminous rooftop exchangers.',
+      'Migration compacts route millions through protected inland corridors.'
+    ],
     indicators: {
       climate: 82,
       biodiversity: 31,
@@ -39,6 +46,13 @@ const eras = {
     civilizationState: 'Floating research states and orbital weather grids',
     riskLevel: 'Managed turbulence',
     description: 'Autonomous reefs, blue-carbon forests, and current stabilizers pulse through the oceans. Humanity survives by listening to tides as if they are planetary instrumentation.',
+    sceneClass: 'era-scene-2300',
+    sceneCaption: 'World Scene · Ocean engineering, blue currents, floating research platforms',
+    events: [
+      'Current engines synchronize across the Pacific repair belt.',
+      'Floating laboratories seed carbon kelp beneath storm-bright skies.',
+      'Reef intelligences map safe harbors through blue acoustic signals.'
+    ],
     indicators: {
       climate: 64,
       biodiversity: 49,
@@ -54,6 +68,13 @@ const eras = {
     civilizationState: 'Low-footprint city clusters inside rewilded zones',
     riskLevel: 'Moderate',
     description: 'Migration corridors cross old borders. Engineered forests and naturally adapted species begin to outgrow the memory of crisis, turning former extraction zones into living archives.',
+    sceneClass: 'era-scene-5000',
+    sceneCaption: 'World Scene · Rewilded continents, green migration corridors',
+    events: [
+      'Megafauna herds enter the northern corridor without human escort.',
+      'Former highways bloom into pollinator rivers and canopy bridges.',
+      'Low-footprint cities dim their lights for continent-scale migrations.'
+    ],
     indicators: {
       climate: 42,
       biodiversity: 72,
@@ -69,6 +90,13 @@ const eras = {
     civilizationState: 'Sparse archives, autonomous habitats, and mythic ruins',
     riskLevel: 'Uncertain',
     description: 'Cities no longer look built. Towers become nesting cliffs, transit tunnels become rivers, and the remaining intelligences read civilization as geology with lights still blinking inside.',
+    sceneClass: 'era-scene-50000',
+    sceneCaption: 'World Scene · Post-human ruins, glowing forests, abandoned megastructures',
+    events: [
+      'A vertical ruin sheds solar glass into a glowing forest canopy.',
+      'Archive drones wake briefly as vines bridge the transit canyon.',
+      'Nocturnal forests pulse around abandoned megastructure shadows.'
+    ],
     indicators: {
       climate: 35,
       biodiversity: 86,
@@ -84,6 +112,13 @@ const eras = {
     civilizationState: 'Archaeological signal and machine custodians',
     riskLevel: 'Low but deep-time variable',
     description: 'Continents drift into unfamiliar climates. Life has stopped recovering and started inventing, while the human era persists as mineral traces and patient machine memories.',
+    sceneClass: 'era-scene-1000000',
+    sceneCaption: 'World Scene · New biosphere equilibrium, strange ecosystems',
+    events: [
+      'Strange canopy organisms open reflective blooms at dusk.',
+      'Machine custodians register a stable million-year carbon rhythm.',
+      'New clades cross mineral wetlands along bioluminescent trails.'
+    ],
     indicators: {
       climate: 24,
       biodiversity: 94,
@@ -99,6 +134,13 @@ const eras = {
     civilizationState: 'No recognizable civilization, only fossilized intent',
     riskLevel: 'Geological unknown',
     description: 'The map is no longer ours. Oceans, mountains, and species have rewritten Earth into a distant living world where humanity is a thin signal buried inside stone.',
+    sceneClass: 'era-scene-100000000',
+    sceneCaption: 'World Scene · Deep Earth renewal, alien continents, volcanic atmosphere',
+    events: [
+      'Volcanic skies stain new coastlines with copper atmospheric light.',
+      'Alien continents split along newborn mountain-fire seams.',
+      'Deep-time symbionts colonize basalt shelves above forgotten fossils.'
+    ],
     indicators: {
       climate: 18,
       biodiversity: 98,
@@ -118,6 +160,10 @@ const eraDominantSpecies = document.querySelector('#era-dominant-species');
 const eraCivilizationState = document.querySelector('#era-civilization-state');
 const eraRiskLevel = document.querySelector('#era-risk-level');
 const eraRiskChip = document.querySelector('#era-risk-chip');
+const worldScene = document.querySelector('#world-scene');
+const sceneCaption = document.querySelector('.scene-caption');
+const worldEventList = document.querySelector('#world-event-list');
+const sceneClasses = Object.values(eras).map((era) => era.sceneClass);
 const eraIndicatorElements = {
   climate: {
     value: document.querySelector('#indicator-climate-value'),
@@ -148,6 +194,14 @@ function updateEraPanel(eraKey) {
   eraCivilizationState.textContent = era.civilizationState;
   eraRiskLevel.textContent = era.riskLevel;
   eraRiskChip.textContent = era.riskLevel;
+  worldScene.classList.remove(...sceneClasses);
+  worldScene.classList.add(era.sceneClass);
+  sceneCaption.textContent = era.sceneCaption;
+  worldEventList.replaceChildren(...era.events.map((eventText) => {
+    const eventItem = document.createElement('li');
+    eventItem.textContent = eventText;
+    return eventItem;
+  }));
 
   Object.entries(era.indicators).forEach(([indicator, percentage]) => {
     eraIndicatorElements[indicator].value.textContent = `${percentage}%`;

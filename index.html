@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Earth Simulation V3 is an interactive speculative future-history platform for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
-  <title>Earth Simulation V3 | Interactive Future Planet Engine</title>
+  <meta name="description" content="Earth Simulation V4 is an interactive speculative future-history platform for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
+  <title>Earth Simulation V4 | Interactive Future Planet Engine</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Planetary future engine</p>
           <h1 id="hero-title">Earth Simulation: A Future Planet Engine</h1>
-          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V3 interface turns the planet into an interactive cinematic model of adaptive worlds yet to come.</p>
+          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V4 interface turns the planet into an interactive cinematic model of adaptive worlds yet to come.</p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="#timeline">Explore the timeline</a>
             <a class="button button-secondary" href="#civilization">Run civilization model</a>
@@ -99,7 +99,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Future timeline control system</p>
           <h2 id="timeline-title">Select an era and run the future panel.</h2>
-          <p>V3 turns the timeline into an interactive simulation console. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
+          <p>V4 turns the timeline into an interactive cinematic simulation console. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
         </div>
         <div class="timeline-console reveal">
           <div class="timeline-control-rail" aria-label="Future era controls">
@@ -132,12 +132,28 @@
           <article class="era-simulation-panel" aria-live="polite" aria-atomic="true">
             <div class="panel-status-bar">
               <span>Era simulation online</span>
+              <span class="simulation-mode">V4 visual era rendering active</span>
               <span id="era-risk-chip">High volatility</span>
             </div>
             <div class="era-panel-content">
               <p class="console-label">Selected era</p>
               <h3 id="era-title">2080 · Climate Adaptation Era</h3>
               <p id="era-description">The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.</p>
+              <div id="world-scene" class="world-scene era-scene-2080" aria-label="CSS-only cinematic world scene for the selected era">
+                <div class="scene-sky" aria-hidden="true"></div>
+                <div class="scene-glow" aria-hidden="true"></div>
+                <div class="scene-orb scene-orb-one" aria-hidden="true"></div>
+                <div class="scene-orb scene-orb-two" aria-hidden="true"></div>
+                <div class="scene-landscape" aria-hidden="true"></div>
+                <div class="scene-structure scene-structure-one" aria-hidden="true"></div>
+                <div class="scene-structure scene-structure-two" aria-hidden="true"></div>
+                <div class="scene-structure scene-structure-three" aria-hidden="true"></div>
+                <div class="scene-shield" aria-hidden="true"></div>
+                <div class="scene-flow scene-flow-one" aria-hidden="true"></div>
+                <div class="scene-flow scene-flow-two" aria-hidden="true"></div>
+                <div class="scene-particles" aria-hidden="true"></div>
+                <div class="scene-caption">World Scene · Climate-adaptive megacity, heat glow, coastal shields</div>
+              </div>
               <div class="era-facts" aria-label="Selected era details">
                 <div><span>Planet Status</span><strong id="era-planet-status">Strained adaptation network</strong></div>
                 <div><span>Climate Condition</span><strong id="era-climate-condition">Hot, volatile, partially managed</strong></div>
@@ -147,26 +163,34 @@
               </div>
               <div class="indicator-grid" aria-label="Planetary visual indicators">
                 <div class="indicator-card">
-                  <div><span>Climate pressure</span><strong id="indicator-climate-value">82%</strong></div>
+                  <div><span>Climate Pressure</span><strong id="indicator-climate-value">82%</strong></div>
                   <span class="indicator-track"><span id="indicator-climate-bar" style="width: 82%"></span></span>
                 </div>
                 <div class="indicator-card">
-                  <div><span>Biodiversity recovery</span><strong id="indicator-biodiversity-value">31%</strong></div>
+                  <div><span>Biodiversity Recovery</span><strong id="indicator-biodiversity-value">31%</strong></div>
                   <span class="indicator-track"><span id="indicator-biodiversity-bar" style="width: 31%"></span></span>
                 </div>
                 <div class="indicator-card">
-                  <div><span>Civilization complexity</span><strong id="indicator-civilization-value">76%</strong></div>
+                  <div><span>Civilization Complexity</span><strong id="indicator-civilization-value">76%</strong></div>
                   <span class="indicator-track"><span id="indicator-civilization-bar" style="width: 76%"></span></span>
                 </div>
                 <div class="indicator-card">
-                  <div><span>Planet stability</span><strong id="indicator-stability-value">38%</strong></div>
+                  <div><span>Planet Stability</span><strong id="indicator-stability-value">38%</strong></div>
                   <span class="indicator-track"><span id="indicator-stability-bar" style="width: 38%"></span></span>
                 </div>
+              </div>
+              <div class="world-event-log" aria-label="World Event Log">
+                <div class="event-log-heading">World Event Log</div>
+                <ul id="world-event-list">
+                  <li>Coastal shield gates close before the equatorial surge window.</li>
+                  <li>Adaptive towers redirect heat through luminous rooftop exchangers.</li>
+                  <li>Migration compacts route millions through protected inland corridors.</li>
+                </ul>
               </div>
             </div>
           </article>
         </div>
-        <p class="version-note reveal">V3 introduces interactive era switching. Future versions will connect AI-generated scenarios and 3D planetary visualization.</p>
+        <p class="version-note reveal">V4 visual era rendering is active with CSS-only cinematic world scenes, animated metrics, and dynamic planetary event logs.</p>
       </section>
 
       <section id="species" class="content-section" aria-labelledby="species-title">
@@ -268,7 +292,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Climate shift</p>
           <h2 id="climate-title">Variables shaping the future planet.</h2>
-          <p>V3 keeps a dashboard-style climate layer for reading planetary pressure and recovery signals.</p>
+          <p>V4 keeps a dashboard-style climate layer while adding cinematic visual era rendering to planetary pressure and recovery signals.</p>
         </div>
         <div class="climate-grid">
           <article class="climate-card reveal"><span>Temperature Rise</span><strong>+2.7°C</strong><p>Mid-range warming pressure used to test adaptation thresholds.</p></article>
@@ -283,7 +307,7 @@
         <div class="about-panel reveal">
           <p class="eyebrow">Project vision</p>
           <h2 id="vision-title">From static concept to living simulation atlas.</h2>
-          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V3 expands the foundation with interactive era switching while keeping the experience fast, static, and ready for Vercel.</p>
+          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V4 expands the foundation with CSS-only world scenes, animated metrics, and dynamic event logs while keeping the experience fast, static, and ready for Vercel.</p>
         </div>
       </section>
 
@@ -296,8 +320,8 @@
         <div class="roadmap-grid" role="list">
           <article class="roadmap-card reveal" role="listitem"><span>V1</span><h3>Cinematic concept website</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V2</span><h3>Expanded content architecture</h3></article>
-          <article class="roadmap-card reveal current" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
-          <article class="roadmap-card reveal" role="listitem"><span>V4</span><h3>AI-generated scenarios</h3></article>
+          <article class="roadmap-card reveal" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
+          <article class="roadmap-card reveal current" role="listitem"><span>V4</span><h3>Visual era rendering</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V5</span><h3>User-created worlds</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V6</span><h3>3D planetary simulation</h3></article>
         </div>
