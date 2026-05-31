@@ -18,24 +18,35 @@ siteNav.querySelectorAll('a').forEach((link) => {
 const scenarios = {
   stewardship: {
     title: 'Planetary Stewardship',
-    copy: 'Civilizations coordinate energy, food, water, and habitat restoration through transparent planetary governance.',
+    copy: 'Global institutions coordinate energy, food, water, and habitat restoration through transparent planetary governance and shared ecological accounting.',
     stability: '91%',
     biodiversity: '84%',
-    expansion: '52%'
+    expansion: '52%',
+    risk: 'Low'
   },
   orbital: {
     title: 'Orbital Renaissance',
-    copy: 'Industry migrates into orbit, lowering surface pressure while lunar foundries and habitats expand human possibility.',
-    stability: '76%',
-    biodiversity: '68%',
-    expansion: '94%'
+    copy: 'Heavy industry moves into orbit, surface pressure drops, and lunar foundries fund a new era of habitat repair and interplanetary culture.',
+    stability: '78%',
+    biodiversity: '71%',
+    expansion: '96%',
+    risk: 'Moderate'
   },
   fragmented: {
     title: 'Fragmented Survival',
-    copy: 'Regional enclaves adapt independently, preserving knowledge unevenly while ecosystems recover in unpredictable patterns.',
-    stability: '48%',
-    biodiversity: '57%',
-    expansion: '31%'
+    copy: 'Regional enclaves adapt independently, protecting knowledge unevenly while climate shocks and autonomous ecosystems produce unpredictable recovery patterns.',
+    stability: '46%',
+    biodiversity: '58%',
+    expansion: '29%',
+    risk: 'Severe'
+  },
+  machine: {
+    title: 'Machine-Guided Biosphere',
+    copy: 'Distributed artificial intelligences regulate climate infrastructure, migration corridors, seed vaults, and ocean repair while human communities negotiate control.',
+    stability: '83%',
+    biodiversity: '89%',
+    expansion: '67%',
+    risk: 'Managed'
   }
 };
 
@@ -45,6 +56,7 @@ const scenarioCopy = document.querySelector('#scenario-copy');
 const metricStability = document.querySelector('#metric-stability');
 const metricBiodiversity = document.querySelector('#metric-biodiversity');
 const metricExpansion = document.querySelector('#metric-expansion');
+const metricRisk = document.querySelector('#metric-risk');
 
 scenarioButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -58,6 +70,7 @@ scenarioButtons.forEach((button) => {
     metricStability.textContent = scenario.stability;
     metricBiodiversity.textContent = scenario.biodiversity;
     metricExpansion.textContent = scenario.expansion;
+    metricRisk.textContent = scenario.risk;
   });
 });
 
