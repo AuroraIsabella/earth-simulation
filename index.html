@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Earth Simulation is a cinematic sci-fi static website imagining the future evolution of Earth, species, and civilization.">
+  <title>Earth Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="Earth Simulation home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Earth Simulation</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-navigation" class="site-nav">
+        <a href="#timeline">Timeline</a>
+        <a href="#species">Species</a>
+        <a href="#civilization">Civilization</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section-grid" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Planetary future engine</p>
+          <h1 id="hero-title">Simulate the next ages of Earth.</h1>
+          <p class="hero-text">A cinematic science-fiction exploration of climate shifts, adaptive life, orbital industry, and the civilizations that may rise beneath alien skies.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#timeline">Explore the timeline</a>
+            <a class="button button-secondary" href="#civilization">Run civilization model</a>
+          </div>
+          <dl class="hero-stats" aria-label="Simulation highlights">
+            <div>
+              <dt>12M+</dt>
+              <dd>years projected</dd>
+            </div>
+            <div>
+              <dt>9</dt>
+              <dd>biosphere layers</dd>
+            </div>
+            <div>
+              <dt>3</dt>
+              <dd>civilization paths</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="planet-stage reveal" aria-label="Animated future Earth visualization">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="planet">
+            <span class="continent continent-one"></span>
+            <span class="continent continent-two"></span>
+            <span class="continent continent-three"></span>
+            <span class="glow-line"></span>
+          </div>
+          <div class="satellite satellite-one"></div>
+          <div class="satellite satellite-two"></div>
+          <div class="scan-panel">
+            <span>Biome drift</span>
+            <strong>74%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="content-section" aria-labelledby="timeline-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Future Earth evolution timeline</p>
+          <h2 id="timeline-title">From near-future pressure to deep-time transformation.</h2>
+          <p>Each age imagines how geology, atmosphere, oceans, and intelligence could reshape the planet in a speculative simulation.</p>
+        </div>
+        <div class="timeline" role="list">
+          <article class="timeline-item reveal" role="listitem">
+            <span class="timeline-year">2080</span>
+            <div>
+              <h3>Adaptive megacities</h3>
+              <p>Coastal shields, vertical farms, and urban cooling forests become essential planetary infrastructure.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" role="listitem">
+            <span class="timeline-year">2300</span>
+            <div>
+              <h3>Ocean climate networks</h3>
+              <p>Autonomous reefs, carbon kelp arrays, and floating laboratories turn the oceans into responsive ecosystems.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" role="listitem">
+            <span class="timeline-year">5000</span>
+            <div>
+              <h3>Rewilded continents</h3>
+              <p>Large migration corridors allow engineered and naturally adapted species to repopulate recovered landscapes.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" role="listitem">
+            <span class="timeline-year">1.2M</span>
+            <div>
+              <h3>New biosphere equilibrium</h3>
+              <p>Continents shift, atmospheric cycles stabilize, and novel ecosystems evolve beyond human design.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="species" class="content-section" aria-labelledby="species-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Species evolution cards</p>
+          <h2 id="species-title">Life adapts to the simulation.</h2>
+          <p>Speculative organisms show how survival may favor resilience, symbiosis, and intelligence in extreme environments.</p>
+        </div>
+        <div class="card-grid">
+          <article class="species-card reveal">
+            <div class="card-icon arctic" aria-hidden="true"></div>
+            <h3>Polar glasswing</h3>
+            <p>Transparent thermal membranes capture weak sunlight while reflective scales reduce heat loss on frozen coastlines.</p>
+            <span>Cold-adapted pollinator</span>
+          </article>
+          <article class="species-card reveal">
+            <div class="card-icon reef" aria-hidden="true"></div>
+            <h3>Coral architect</h3>
+            <p>Bioelectric reef builders grow mineral lattices that protect shorelines and shelter dense marine communities.</p>
+            <span>Ocean ecosystem engineer</span>
+          </article>
+          <article class="species-card reveal">
+            <div class="card-icon desert" aria-hidden="true"></div>
+            <h3>Dune mycelium</h3>
+            <p>Underground fungal networks trade moisture and nutrients across desertified regions, creating hidden green corridors.</p>
+            <span>Arid-land stabilizer</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="civilization" class="content-section civilization" aria-labelledby="civilization-title">
+        <div class="simulation-console reveal">
+          <div class="console-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="console-body">
+            <p class="console-label">Civilization simulation section</p>
+            <h2 id="civilization-title">Choose a future pathway.</h2>
+            <p>The civilization model compares social cooperation, planetary restoration, and orbital expansion as competing strategies.</p>
+            <div class="scenario-controls" role="group" aria-label="Civilization scenario controls">
+              <button class="scenario-button active" type="button" data-scenario="stewardship">Stewardship</button>
+              <button class="scenario-button" type="button" data-scenario="orbital">Orbital</button>
+              <button class="scenario-button" type="button" data-scenario="fragmented">Fragmented</button>
+            </div>
+            <div class="scenario-output" aria-live="polite">
+              <h3 id="scenario-title">Planetary Stewardship</h3>
+              <p id="scenario-copy">Civilizations coordinate energy, food, water, and habitat restoration through transparent planetary governance.</p>
+              <div class="metric-list">
+                <div><span>Stability</span><strong id="metric-stability">91%</strong></div>
+                <div><span>Biodiversity</span><strong id="metric-biodiversity">84%</strong></div>
+                <div><span>Expansion</span><strong id="metric-expansion">52%</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="content-section about" aria-labelledby="about-title">
+        <div class="about-panel reveal">
+          <p class="eyebrow">About section</p>
+          <h2 id="about-title">A speculative window into planetary change.</h2>
+          <p>Earth Simulation is a static concept site built to feel like a deep-space mission interface. It blends cinematic design with imaginative future-history storytelling, inviting visitors to consider how ecosystems, species, and civilizations are connected across time.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
