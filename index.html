@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Earth Simulation V4.1 is an interactive speculative future-history platform for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
-  <title>Earth Simulation V4.1 | Interactive Future Planet Engine</title>
+  <meta name="description" content="Earth Simulation V5 is an interactive speculative future-history archive for exploring Earth's climate, species evolution, civilization paths, and deep-time planetary change.">
+  <title>Earth Simulation V5 | Living Future Earth Archive</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,7 +23,9 @@
       <nav id="site-navigation" class="site-nav">
         <a href="#concept">Concept</a>
         <a href="#timeline">Timeline</a>
+        <a href="#world-events">Events</a>
         <a href="#species">Species</a>
+        <a href="#lifeform-fate">Fates</a>
         <a href="#civilization">Civilization</a>
         <a href="#climate">Climate</a>
         <a href="#roadmap">Roadmap</a>
@@ -35,7 +37,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Planetary future engine</p>
           <h1 id="hero-title">Earth Simulation: A Future Planet Engine</h1>
-          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V4 interface turns the planet into an interactive cinematic model of adaptive worlds yet to come.</p>
+          <p class="hero-text">Simulate Earth's possible future across climate disruption, species evolution, civilization design, and deep time. This V5 interface turns the planet into a living future Earth archive of adaptive worlds, world events, and fate-based lifeform records.</p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="#timeline">Explore the timeline</a>
             <a class="button button-secondary" href="#civilization">Run civilization model</a>
@@ -99,7 +101,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Future timeline control system</p>
           <h2 id="timeline-title">Select an era and run the future panel.</h2>
-          <p>V4.1 polishes the timeline into a premium cinematic simulation console. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
+          <p>V5 links the timeline to a living world event archive. Choose a future date to inspect planetary status, climate pressure, biodiversity recovery, civilization complexity, and stability signals.</p>
         </div>
         <div class="timeline-console reveal">
           <div class="timeline-control-rail" aria-label="Future era controls">
@@ -132,7 +134,7 @@
           <article class="era-simulation-panel" aria-live="polite" aria-atomic="true">
             <div class="panel-status-bar">
               <span>Era simulation online</span>
-              <span class="simulation-mode">V4.1 cinematic HUD active</span>
+              <span class="simulation-mode">V5 archive HUD active</span>
               <span id="era-risk-chip">High volatility</span>
             </div>
             <div class="era-panel-content">
@@ -179,18 +181,51 @@
                   <span class="indicator-track"><span id="indicator-stability-bar" style="width: 38%"></span></span>
                 </div>
               </div>
-              <div class="world-event-log" aria-label="World Event Log">
-                <div class="event-log-heading">World Event Log</div>
+              <div class="timeline-event-preview" aria-label="World Event Log preview">
+                <div class="event-log-heading">World Event Log Preview</div>
                 <ul id="world-event-list">
                   <li>Coastal shield gates close before the equatorial surge window.</li>
                   <li>Adaptive towers redirect heat through luminous rooftop exchangers.</li>
                   <li>Migration compacts route millions through protected inland corridors.</li>
+                  <li>AI flood models reroute emergency food webs through inland rail forests.</li>
                 </ul>
               </div>
             </div>
           </article>
         </div>
-        <p class="version-note reveal">V4.1 visual polish is active with larger CSS-only cinematic world scenes, layered HUD scan lines, animated particles, aligned metrics, and dynamic planetary event logs.</p>
+        <p class="version-note reveal">V5 introduces the first layer of fate-based world interaction.</p>
+      </section>
+
+      <section id="world-events" class="content-section world-event-archive" aria-labelledby="world-events-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Living future Earth archive</p>
+          <h2 id="world-events-title">World Event Log</h2>
+          <p>Select an era to read cinematic event records from the archive. The log also updates when you select an era in the simulator above.</p>
+        </div>
+        <div class="archive-console reveal">
+          <div class="archive-era-controls" role="group" aria-label="World Event Log era controls">
+            <button class="event-era-button active" type="button" data-era="2080" aria-pressed="true">2080</button>
+            <button class="event-era-button" type="button" data-era="2300" aria-pressed="false">2300</button>
+            <button class="event-era-button" type="button" data-era="5000" aria-pressed="false">5000</button>
+            <button class="event-era-button" type="button" data-era="50000" aria-pressed="false">50,000</button>
+            <button class="event-era-button" type="button" data-era="1000000" aria-pressed="false">1,000,000</button>
+            <button class="event-era-button" type="button" data-era="100000000" aria-pressed="false">100,000,000</button>
+          </div>
+          <article class="world-event-log" aria-live="polite" aria-atomic="true">
+            <div class="event-log-topline">
+              <span>Archive stream</span>
+              <strong id="event-log-era">2080</strong>
+            </div>
+            <h3 id="event-log-title">2080 · Climate Adaptation Era</h3>
+            <p id="event-log-summary">The century closes under heat, flood, and migration pressure. Cities become defensive ecosystems, and every coast operates like a monitored threshold between survival and retreat.</p>
+            <div id="event-records" class="event-record-grid">
+              <article class="event-record"><span>Climate disaster</span><p>Coastal shield gates close before the equatorial surge window.</p></article>
+              <article class="event-record"><span>Species adaptation</span><p>Adaptive mangrove towers redirect heat through luminous rooftop exchangers.</p></article>
+              <article class="event-record"><span>Civilization decision</span><p>Migration compacts route millions through protected inland corridors.</p></article>
+              <article class="event-record"><span>AI intervention</span><p>AI flood models reroute emergency food webs through inland rail forests.</p></article>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="species" class="content-section" aria-labelledby="species-title">
@@ -257,6 +292,50 @@
         </div>
       </section>
 
+      <section id="lifeform-fate" class="content-section lifeform-fate" aria-labelledby="lifeform-fate-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Fate-based world interaction</p>
+          <h2 id="lifeform-fate-title">Lifeform Fate Prototype</h2>
+          <p>Users will eventually be able to choose a lifeform and experience its evolutionary fate across the future Earth archive.</p>
+        </div>
+        <div class="lifeform-console reveal">
+          <div class="lifeform-card-grid" role="group" aria-label="Selectable lifeform fate cards">
+            <button class="lifeform-card active" type="button" data-lifeform="coral" aria-pressed="true">
+              <span class="card-icon reef" aria-hidden="true"></span>
+              <strong>Coral Architect</strong>
+              <small>Bioelectric reef builder</small>
+            </button>
+            <button class="lifeform-card" type="button" data-lifeform="dune" aria-pressed="false">
+              <span class="card-icon desert" aria-hidden="true"></span>
+              <strong>Dune Mycelium</strong>
+              <small>Desert soil-web intelligence</small>
+            </button>
+            <button class="lifeform-card" type="button" data-lifeform="polar" aria-pressed="false">
+              <span class="card-icon arctic" aria-hidden="true"></span>
+              <strong>Polar Glasswing</strong>
+              <small>Reflective wetland pollinator</small>
+            </button>
+            <button class="lifeform-card" type="button" data-lifeform="night" aria-pressed="false">
+              <span class="card-icon night" aria-hidden="true"></span>
+              <strong>Night Reef Intelligence</strong>
+              <small>Distributed ocean memory</small>
+            </button>
+          </div>
+          <article class="fate-output" aria-live="polite" aria-atomic="true">
+            <p class="console-label">Selected lifeform fate</p>
+            <h3 id="lifeform-title">Coral Architect</h3>
+            <dl class="fate-detail-grid">
+              <div><dt>Habitat</dt><dd id="lifeform-habitat">Warm shallow seas, artificial reef belts, and restored continental shelves.</dd></div>
+              <div><dt>Survival Pressure</dt><dd id="lifeform-pressure">Ocean acidity, storm surge, heat pulses, and competition for mineral scaffolds.</dd></div>
+              <div><dt>Evolutionary Advantage</dt><dd id="lifeform-advantage">Bioelectric colonies grow mineral lattices that buffer storms and shelter nurseries.</dd></div>
+              <div><dt>Possible Fate</dt><dd id="lifeform-fate-text">May become a continent-scale reef civilization foundation or collapse into fossilized storm walls.</dd></div>
+              <div><dt>Relationship with Civilization</dt><dd id="lifeform-civilization">Protected by floating research states, then slowly granted autonomy as a living coastal defense system.</dd></div>
+            </dl>
+            <p class="version-note">V5 introduces the first layer of fate-based world interaction.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="civilization" class="content-section civilization" aria-labelledby="civilization-title">
         <div class="simulation-console reveal">
           <div class="console-header">
@@ -292,7 +371,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Climate shift</p>
           <h2 id="climate-title">Variables shaping the future planet.</h2>
-          <p>V4 keeps a dashboard-style climate layer while adding cinematic visual era rendering to planetary pressure and recovery signals.</p>
+          <p>V5 keeps a dashboard-style climate layer while adding cinematic visual era rendering to planetary pressure and recovery signals.</p>
         </div>
         <div class="climate-grid">
           <article class="climate-card reveal"><span>Temperature Rise</span><strong>+2.7°C</strong><p>Mid-range warming pressure used to test adaptation thresholds.</p></article>
@@ -307,7 +386,7 @@
         <div class="about-panel reveal">
           <p class="eyebrow">Project vision</p>
           <h2 id="vision-title">From static concept to living simulation atlas.</h2>
-          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V4 expands the foundation with CSS-only world scenes, animated metrics, and dynamic event logs while keeping the experience fast, static, and ready for Vercel.</p>
+          <p>The long-term vision is an interactive simulation where visitors can generate ecosystems with AI, compare future civilization scenarios, build user-created timelines, and eventually explore a real-time 3D Earth visualization. V5 expands the foundation with world event archives, fate-based lifeform records, CSS-only world scenes, and animated metrics while keeping the experience fast, static, and ready for Vercel.</p>
         </div>
       </section>
 
@@ -321,8 +400,8 @@
           <article class="roadmap-card reveal" role="listitem"><span>V1</span><h3>Cinematic concept website</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V2</span><h3>Expanded content architecture</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V3</span><h3>Interactive timeline</h3></article>
-          <article class="roadmap-card reveal current" role="listitem"><span>V4</span><h3>Visual era rendering</h3></article>
-          <article class="roadmap-card reveal" role="listitem"><span>V5</span><h3>User-created worlds</h3></article>
+          <article class="roadmap-card reveal" role="listitem"><span>V4</span><h3>Visual era rendering</h3></article>
+          <article class="roadmap-card reveal current" role="listitem"><span>V5</span><h3>World events and lifeform fate</h3></article>
           <article class="roadmap-card reveal" role="listitem"><span>V6</span><h3>3D planetary simulation</h3></article>
         </div>
       </section>
